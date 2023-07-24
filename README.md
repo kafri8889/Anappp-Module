@@ -1,3 +1,35 @@
+## How to use
+1) Copy module to root of project directory
+2) Add `include(":module_name")` to `settings.gradle.kts (Project Settings)`
+```
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "Anappp Module"
+include(":app")
+include(":datemodule") <------
+```
+3) Add `implementation(project(mapOf("path" to ":module_name")))` to dependencies in `build.gradle.kts (Module :app)`
+```
+dependencies {
+    ...
+    implementation(project(mapOf("path" to ":datemodule"))) <------
+    ...
+}
+```
+
 ## Date Module
 ``` kotlin
 // Tested on July 24, 2023
