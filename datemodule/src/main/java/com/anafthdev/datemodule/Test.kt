@@ -108,7 +108,7 @@ fun main() {
 	}
 
 
-	// 24-07-2023 07:00:00 GMT+7 until 24-07-2023 07:00:00 GMT+7
+	// 24-07-2023 07:00:00 GMT+7 until 31-07-2023 07:00:00 GMT+7
 	val availableWeeks = DateModule.getAvailableWeeks(1690156800000, 1690761600000)
 	println(availableWeeks)
 	// [Week(month=6, year=2023, firstDay=1690131601000, lastDay=1690736399000, firstDayOfMonth=24, lastDayOfMonth=30),
